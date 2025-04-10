@@ -41,7 +41,7 @@ const NewArrivals = () => {
         <h2 class="text-2xl font-bold text-slate-900 mb-10">Explore New Arrivals</h2>
       <div className="container mx-auto text-center mb-10 relative ">
         {/* scroll  left and right */}
-        <div className="absolute right-0 flex space-x-2">
+        <div className="absolute right-0 flex space-x-1">
           <button
             onClick={() => scroll("left")}
             disabled={!canScrollLeft}

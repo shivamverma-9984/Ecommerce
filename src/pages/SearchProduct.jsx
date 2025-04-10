@@ -29,13 +29,13 @@ const SearchProduct = () => {
           No product available.
         </p>
       ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-2 md:gap-4">
           {results.map((product) => (
             <div
               key={product.Id}
               className="bg-white flex flex-col rounded overflow-hidden cursor-pointer hover:scale-[1.01] transition-all"
             >
-              <Link to={`/product/${product.Id}`} className="w-full border-1">
+              <Link to={`/product/${product.Id}`} className="w-full">
                 <img
                   src={product.Image}
                   alt={product.Name}

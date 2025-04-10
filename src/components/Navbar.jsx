@@ -35,12 +35,9 @@ const Navbar = () => {
   const isLogin = localStorage.getItem("isLogin");
   const handleAuth = () => {
     localStorage.removeItem("isLogin");
-    navigate('/')
-
-  }
-  useEffect(() => {
-    
-  }, [isLogin]);
+    navigate("/");
+  };
+  useEffect(() => {}, [isLogin]);
 
   return (
     <>
@@ -73,8 +70,8 @@ const Navbar = () => {
         </div>
 
         {/* right-part */}
-        <div className="flex items-center space-x-4">
-          <div className="overflow-hidden">
+        <div className="flex items-center  md:space-x-4">
+          <div className="overflow-hidden mr-2">
             <SearchBar />
           </div>
           <button
@@ -83,16 +80,16 @@ const Navbar = () => {
           >
             <HiOutlineShoppingBag className="h-6 w-6 text-gray-700" />
             <span className="absolute -top-1 bg-red-400 text-white text-xs rounded-full px-1.5 py-0.5">
-              {isLogin ? cartItems.length:"0"}
+              {isLogin ? cartItems.length : "0"}
             </span>
           </button>
           {/* searBar */}
           {isLogin ? (
             <Link
-              to="/profile"
+              to="#"
               className="hover:text-black flex justify-between"
             >
-              <div className="relative   text-lg ">
+              <div className="relative   text-lg z-50 ">
                 <div className="group ">
                   <button
                     type="button"
@@ -105,13 +102,13 @@ const Navbar = () => {
                     <div className="py-1">
                       <Link
                         to=""
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" 
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       >
                         Profile
                       </Link>
                       <button
-                       
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={handleAuth}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                        onClick={handleAuth}
                       >
                         Logout{" "}
                       </button>
@@ -142,8 +139,8 @@ const Navbar = () => {
           navbarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex justify-between  p-4">
-          <div className=" absolute md:hidden flex flex-col space-y-6 mt-8 text-xl">
+        <div className="flex justify-between  px-2 mt-2">
+          <div className=" absolute md:hidden flex flex-col space-y-3 mt-8 text-xl">
             <Link to="/" onClick={toggleNavDrawer} className="nav-link">
               Home
             </Link>
@@ -155,6 +152,12 @@ const Navbar = () => {
             </Link>
             <Link to="womens" onClick={toggleNavDrawer} className="nav-link">
               Women
+            </Link>
+            <Link to="about" onClick={toggleNavDrawer} className="nav-link">
+              About
+            </Link>
+            <Link to="contact" onClick={toggleNavDrawer} className="nav-link">
+              Contact{" "}
             </Link>
           </div>
           <button onClick={toggleNavDrawer} className="r">

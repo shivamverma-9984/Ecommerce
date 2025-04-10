@@ -7,8 +7,9 @@ const Mens = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className=" mt-18 mx-auto px-3 ">
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 sm:gap-6">
+    <div className=" mt-24 mx-auto px-3  ">
+      <h2 class="text-2xl font-bold text-slate-900 mb-6">Mens Products</h2>
+        <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-2 md:gap-4">
         {products
           .filter((item) => item.Category === "Men")
           .map((product) => (

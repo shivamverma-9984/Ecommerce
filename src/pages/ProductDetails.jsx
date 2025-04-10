@@ -18,10 +18,9 @@ const ProductDetails = () => {
   }else{
     toast.error('Please login to add items to cart')
   }}
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-  const relatedProduct=products.filter(item=>item.Category===product.Category)
+ window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  const relatedProduct=products.filter(item=>item.Category===product.Category && item.subCategory===product.subCategory)
   console.log(relatedProduct);
   return (
     <>

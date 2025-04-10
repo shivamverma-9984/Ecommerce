@@ -12,6 +12,7 @@ const Home = () => {
       <ProductCategories />
       <Products />
       <GenderCollection/>
+      <img src="https://pictures.kartmax.in/live/original/0x0/sites/aPfvUDpPwMn1ZadNKhP7/theme/3-6a08e385-d73b-4641-a86c-aa9b3560085e.jpg" alt="" srcset="" />
     </div>
   );
 };

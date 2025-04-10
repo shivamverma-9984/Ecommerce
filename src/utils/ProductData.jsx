@@ -7,7 +7,8 @@ export const products = [
     Price: 19.99,
     Image: "https://cdn.shopify.com/s/files/1/0420/7073/7058/files/4MSS4057-05_1_d6e7a340-408b-4486-b0e6-71160d492c69.jpg?v=1744140420&quality=20",
     Sizes: ["S", "M", "L", "XL", "XXL"],
-    Category: "Men"
+    Category: "Men",
+    subCategory:"Shirt",
   },
   {
     Id: 2,
@@ -17,7 +18,8 @@ export const products = [
     Price: 59.99,
     Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/kurta/i/y/s/xxl-1047-short-kurta-mahfil-original-imah5ffvzqjjgsce.jpeg?q=70",
     Sizes: ["S", "M", "L", "XL", "XXL"],
-    Category: "Women"
+    Category: "Women",
+    subCategory:"Kurta",
   },
   {
     Id: 3,
@@ -27,7 +29,8 @@ export const products = [
     Price: 74.99,
     Image: "https://cdn.shopify.com/s/files/1/0420/7073/7058/files/4mss3847-06_5_f9150e3a-aa6d-49f8-8e1c-afb9e31e506f.jpg?v=1739423173&quality=20",
     Sizes: ["S", "M", "L", "XL", "XXL"],
-    Category: "Men"
+    Category: "Men",
+    subCategory:"Shirt",
   },
   {
     Id: 4,
@@ -37,7 +40,8 @@ export const products = [
     Price: 129.99,
     Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/kids-t-shirt/s/r/n/8-9-years-neuvo-73-rudra-original-imah5g9ynajv8kdz.jpeg?q=70",
     Sizes: ["S", "M", "L", "XL", "XXL"],
-    Category: "Kid"
+    Category: "Kid",
+    subCategory:"Shirt",
   },
   {
     Id: 5,
@@ -48,6 +52,7 @@ export const products = [
     Image: "https://cdn.shopify.com/s/files/1/0420/7073/7058/files/4MSS3977-08_1_51b68849-8521-4a12-a778-51b3050d9d6f.jpg?v=1741767823&quality=20",
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Men",
+    subCategory:"Shirt",
 
 
   },
@@ -59,7 +64,8 @@ export const products = [
     Price: 89.99,
     Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/q/a/h/xl-10968510-roadster-original-imafpmh52juzesev-bb.jpeg?q=70",
     Sizes: ["S", "M", "L", "XL", "XXL"],
-    Category: "Women"
+    Category: "Women",
+    subCategory:"Shirt",
   },
   {
     Id: 7,
@@ -69,7 +75,8 @@ export const products = [
     Price: 34.99,
     Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/kids-t-shirt/q/t/y/8-9-years-neuvo-257-rudra-original-imah5gkmzvcetz7a.jpeg?q=70",
     Sizes: ["S", "M", "L", "XL", "XXL"],
-    Category: "Kid"
+    Category: "Kid",
+    subCategory:"Shirt",
   },
   {
     Id: 8,
@@ -80,6 +87,7 @@ export const products = [
     Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/x/c/9/13-14-years-cz-24-kds-db-fs-cazzba-original-imagyhx2ezygcfzg.jpeg?q=70",
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Kid",
+    subCategory:"Shirt",
     
   },
   {
@@ -90,7 +98,8 @@ export const products = [
     Price: 24.99,
     Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/shirt/e/v/s/m-67iqtp-iqraar-original-imahaz35gdavv4yc.jpeg?q=70",
     Sizes: ["S", "M", "L", "XL", "XXL"],
-    Category: "Women"
+    Category: "Women",
+    subCategory:"Shirt",
   },
   {
     Id: 10,
@@ -101,6 +110,7 @@ export const products = [
     Image: "https://cdn.shopify.com/s/files/1/0420/7073/7058/files/4MSS3888-01_1_2cb04f8b-2338-4d64-9d8e-a9cff4ef4473.jpg?v=1743502412&quality=20",
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Men",
+    subCategory:"Shirt",
 
   },
   {
@@ -111,7 +121,8 @@ export const products = [
     Price: 39.99,
     Image: "https://cdn.shopify.com/s/files/1/0420/7073/7058/files/dea8a00ccacd17d2a9ff4a315c116b42.webp?v=1724415283&quality=20",
     Sizes: ["S", "M", "L", "XL", "XXL"],
-    Category: "Men"
+    Category: "Men",
+    subCategory:"Shirt",
   },
   {
     Id: 12,
@@ -121,7 +132,8 @@ export const products = [
     Price: 39.99,
     Image: "https://cdn.shopify.com/s/files/1/0420/7073/7058/files/6e8da19be6c6598aa4be83f2e0d6fc63.jpg?v=1734527839&quality=20",
     Sizes: ["S", "M", "L", "XL", "XXL"],
-    Category: "Men"
+    Category: "Men",
+    subCategory:"Shirt",
   },
   {
     Id: 13,
@@ -131,7 +143,8 @@ export const products = [
     Price: 39.99,
     Image: "https://cdn.shopify.com/s/files/1/0420/7073/7058/files/ca54778b8e7dbc9a728bac6b3b2a948e.jpg?v=1734529148&quality=20",
     Sizes: ["S", "M", "L", "XL", "XXL"],
-    Category: "Men"
+    Category: "Men",
+    subCategory:"Shirt",
   },
   {
     Id: 14,
@@ -142,6 +155,7 @@ export const products = [
     Image: "https://cdn.shopify.com/s/files/1/0420/7073/7058/files/4MSS3839-03_1_d490024d-6a4c-4cf2-8c03-d781f21a6cf8.jpg?v=1739287035&quality=20",
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Men",
+    subCategory:"Shirt",
 
   },
   {
@@ -153,6 +167,7 @@ export const products = [
     Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/ethnic-set/r/m/e/m-jef-rbd-814-jaffry-embroidery-original-imah8ag3agbm2hgq.jpeg?q=70",
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Women",
+    subCategory:"Kurta",
 
   },
   {
@@ -163,7 +178,8 @@ export const products = [
     Price: 39.99,
     Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/sari/3/j/p/free-turky-box-pink-house-house-of-common-unstitched-original-imah3zye2uvh3dhr.jpeg?q=70",
     Sizes: ["S", "M", "L", "XL", "XXL"],
-    Category: "Women"
+    Category: "Women",
+    subCategory:"Saree",
   },
   {
     Id: 17,
@@ -173,7 +189,8 @@ export const products = [
     Price: 39.99,
     Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/jean/o/1/u/28-kttladiesjeans854-kotty-original-imags7tess6zjqjx.jpeg?q=70",
     Sizes: ["S", "M", "L", "XL", "XXL"],
-    Category: "Women"
+    Category: "Women",
+    subCategory:"Jean",
   },
   {
     Id: 18,
@@ -183,7 +200,8 @@ export const products = [
     Price: 39.99,
     Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/jean/y/r/w/38-highwaist010-tyffyn-original-imah3g9vsjy5pw6f.jpeg?q=70",
     Sizes: ["S", "M", "L", "XL", "XXL"],
-    Category: "Women"
+    Category: "Women",
+    subCategory:"Jean",
   },
   {
     Id: 19,
@@ -193,7 +211,8 @@ export const products = [
     Price: 39.99,
     Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/jean/m/1/d/36-11542062-roadster-original-imagfvzcwfy6cdwg-bb.jpeg?q=70",
     Sizes: ["S", "M", "L", "XL", "XXL"],
-    Category: "Women"
+    Category: "Women",
+    subCategory:"Jean",
   },
   {
     Id: 20,
@@ -204,6 +223,73 @@ export const products = [
     Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/jean/h/y/t/36-wl-stone-blue1-zayla-original-imahf4p2zhwkb9hq.jpeg?q=70",
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Women",
-
+    subCategory:"Jean",
   },
+  {
+    Id: 21,
+    Name: "Bollywood Chiffon Saree",
+    Description: "Embellished Bollywood Chiffon Saree  (Dark Green)",
+    Rating: 4.5,
+    Price: 39.99,
+    Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/sari/m/r/x/free-rama-saree-kakadiya-creation-unstitched-original-imahf3p8hhrvrwfw.jpeg?q=70",
+    Sizes: ["S", "M", "L", "XL", "XXL"],
+    Category: "Women",
+    subCategory:"Saree",
+  },
+  {
+    Id: 22,
+    Name: "Silk Blend Saree ",
+    Description: "Woven, Embellished Banarasi Silk Blend Saree  (Multicolor, Grey)",
+    Rating: 4.5,
+    Price: 39.99,
+    Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/sari/9/m/t/free-sky7101-superlaxmi-unstitched-original-imah9r55zqtkyate.jpeg?q=70",
+    Sizes: ["S", "M", "L", "XL", "XXL"],
+    Category: "Women",
+    subCategory:"Saree",
+  },
+  {
+    Id: 23,
+    Name: "Kanjivaram Silk Saree",
+    Description: "Woven, Temple Border Kanjivaram Pure Silk, Art Silk Saree  (Blue)",
+    Rating: 4.5,
+    Price: 39.99,
+    Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/sari/w/z/l/free-4241s6684-samah-unstitched-original-imahadwy35thr7pw.jpeg?q=70",
+    Sizes: ["S", "M", "L", "XL", "XXL"],
+    Category: "Women",
+    subCategory:"Saree",
+  },
+  {
+    Id: 24,
+    Name: "Georgette Saree ",
+    Description: "Embellished Bollywood Georgette Saree  (Purple)",
+    Rating: 4.5,
+    Price: 39.99,
+    Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/sari/s/w/y/free-2-star-sheldrom-mart-unstitched-original-imahb3gsmqurhyes.jpeg?q=70",
+    Sizes: ["S", "M", "L", "XL", "XXL"],
+    Category: "Women",
+    subCategory:"Saree",
+  },
+  {
+    Id: 25,
+    Name: "Jacquard Silk Saree",
+    Description: "Self Design Kanjivaram Jacquard, Art Silk Saree  (Blue)",
+    Rating: 4.5,
+    Price: 39.99,
+    Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/sari/6/b/i/free-kp-6010-ritcher-unstitched-original-imah7dfjsn8g4gvz.jpeg?q=70",
+    Sizes: ["S", "M", "L", "XL", "XXL"],
+    Category: "Women",
+    subCategory:"Saree",
+  },
+  {
+    Id: 26,
+    Name: "Blue Jeans",
+    Description: "Women Relaxed Fit Mid Rise Blue Jeans.",
+    Rating: 4.5,
+    Price: 39.99,
+    Image: "https://rukminim2.flixcart.com/image/612/612/xif0q/t-shirt/u/e/k/xxl-hft-24hds-be3-hellcat-original-imagzv2bsahgpze5.jpeg?q=70",
+    Sizes: ["S", "M", "L", "XL", "XXL"],
+    Category: "Women",
+    subCategory:"Kurta",
+  },
+  
 ];

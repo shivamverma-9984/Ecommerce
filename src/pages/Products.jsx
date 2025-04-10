@@ -4,7 +4,7 @@ import Product from "./Product";
 const Products = () => {
   
   return (
-      <div className=" mt-4 mx-auto px-3 ">
+      <div className=" mt-4 mx-auto  ">
         <h2 class="text-2xl font-bold text-slate-900 mb-10">
           Explore All Products
         </h2>

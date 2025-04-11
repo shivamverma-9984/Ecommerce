@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 const Navbar = () => {
   const [draweOpen, setDrawerOpen] = useState(false);
+  const [borders,setborders]=useState(false)
   const [isauth, setIsAuth] = useState(true);
   const toggleCartDrawer = () => {
     setDrawerOpen(!draweOpen);
@@ -27,6 +28,8 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const toggleNavDrawer = () => {
     setNavbarOpen(!navbarOpen);
+    setborders(true)
+
   };
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -89,7 +92,7 @@ const Navbar = () => {
               to="#"
               className="hover:text-black flex justify-between"
             >
-              <div className="relative   text-lg z-50 ">
+              <div className="relative   text-lg ">
                 <div className="group ">
                   <button
                     type="button"
@@ -139,26 +142,37 @@ const Navbar = () => {
           navbarOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex justify-between  px-2 mt-2">
+        <div className="flex justify-start  px-2 mt-2">
           <div className=" absolute md:hidden flex flex-col space-y-3 mt-8 text-xl">
-            <Link to="/" onClick={toggleNavDrawer} className="nav-link">
+            <Link to="/" onClick={toggleNavDrawer} className="nav-link ">
               Home
             </Link>
+            { borders && <p className="border w-[100%]"></p>}
             <Link to="/product" onClick={toggleNavDrawer} className="nav-link">
               All Product
             </Link>
+            { borders && <p className="border w-[100%]"></p>}
+
             <Link to="/mens" onClick={toggleNavDrawer} className="nav-link">
               Men
             </Link>
+            { borders && <p className="border w-[100%]"></p>}
+
             <Link to="womens" onClick={toggleNavDrawer} className="nav-link">
               Women
             </Link>
+            { borders && <p className="border w-[100%]"></p>}
+
             <Link to="about" onClick={toggleNavDrawer} className="nav-link">
               About
             </Link>
+            { borders && <p className="border w-[100%]"></p>}
+
             <Link to="contact" onClick={toggleNavDrawer} className="nav-link">
               Contact{" "}
             </Link>
+            { borders && <p className="border w-[100%]"></p>}
+
           </div>
           <button onClick={toggleNavDrawer} className="r">
             <IoMdClose className="h-6 w-6 text-gray-600 right-0" />

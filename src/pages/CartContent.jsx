@@ -23,7 +23,7 @@ const CartContent = () => {
               className="w-16 h-16 object-cover mr-4"
             />
             <div>
-              <h3 className="text-ms font-semibold">{product.Name}</h3>
+              <h3 className="text-sm font-semibold">{product.Name}</h3>
               {/* <p className='text-gray-500 text-sm'>Size: {product.size} | Color: {product.color}</p> */}
               <div className="flex items-center mt-2">
                 <button
@@ -42,9 +42,12 @@ const CartContent = () => {
               </div>
             </div>
           </div>
-          <div>
-            <p className=" font-semibold">${(product.quantity*product.Price).toFixed(2)}</p>
-            <button onClick={() => dispatch(removeFromCart(product.Id))}>
+          <div className="flex flex-col gap-y-2">
+          <div className="flex  items-center">
+          <img className="h-[17px]" src="https://cdn-icons-png.flaticon.com/128/17988/17988582.png" alt="" srcset="" />
+          <p className=" font-semibold  flex">{(product.quantity*product.Price).toFixed(2)}</p>
+          </div>
+            <button className="flex justify-center" onClick={() => dispatch(removeFromCart(product.Id))}>
               <RiDeleteBin3Line />
             </button>
           </div>

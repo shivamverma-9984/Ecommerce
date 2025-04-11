@@ -34,8 +34,13 @@ const CartDrawer = ({draweOpen,toggleCartDrawer}) => {
 
     <div className='p-3 bg-white sticky bottom-0'>
       <div className='flex justify-between items-center mb-2 text-xl'>
-        <p>total Price</p>
-        <h1>${totalAmount}</h1>
+        <p className='font-semibold'>total Price</p>
+        <div className='flex justify-center'>
+        <img className="h-[22px] mt-1" src="https://cdn-icons-png.flaticon.com/128/17988/17988582.png" alt="" srcset="" />
+
+<h1>{totalAmount}</h1>
+        </div>
+      
         </div>
       <button className='w-full bg-black text-white py-3 rounded-lg font-semibold'>ChecKout</button>
       <p className='text-sm tracking-tighter text-gray-500 mt-2'>Shipping ,taxes</p>

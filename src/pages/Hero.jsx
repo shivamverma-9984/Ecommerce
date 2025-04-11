@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 const Hero = () => {
   return (
-    <div>
+    <div className="mt-4">
       <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false}>
         <div>
           <img src="https://pictures.kartmax.in/live/original/0x0/sites/aPfvUDpPwMn1ZadNKhP7/theme/Hellosummer-opt-1-WebBanner-968e5781-1a06-44b0-9185-8dfb4fc15d42.jpg"></img>

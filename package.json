@@ -21,6 +21,7 @@
     "clsx": "^2.1.1",
     "embla-carousel-autoplay": "^8.5.2",
     "embla-carousel-react": "^8.5.2",
+    "framer-motion": "^12.6.5",
     "lucide-react": "^0.482.0",
     "react": "^19.0.0",
     "react-card-slider-component": "^1.0.9",

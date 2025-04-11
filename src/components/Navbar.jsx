@@ -7,20 +7,10 @@ import CartDrawer from "./../pages/CartDrawer";
 import SearchBar from "./../pages/SearchBar";
 import { useSelector } from "react-redux";
 import CategoryDropdown from "../pages/CategoryDropdown";
-import {
-  Search,
-  ShoppingCart,
-  Heart,
-  User,
-  LogIn,
-  Menu,
-  X,
-  Store,
-} from "lucide-react";
+import { LogIn } from "lucide-react";
 const Navbar = () => {
   const [draweOpen, setDrawerOpen] = useState(false);
-  const [borders,setborders]=useState(false)
-  const [isauth, setIsAuth] = useState(true);
+  const [borders, setborders] = useState(false);
   const toggleCartDrawer = () => {
     setDrawerOpen(!draweOpen);
   };
@@ -28,8 +18,7 @@ const Navbar = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const toggleNavDrawer = () => {
     setNavbarOpen(!navbarOpen);
-    setborders(true)
-
+    setborders(true);
   };
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -88,10 +77,7 @@ const Navbar = () => {
           </button>
           {/* searBar */}
           {isLogin ? (
-            <Link
-              to="#"
-              className="hover:text-black flex justify-between"
-            >
+            <Link to="#" className="hover:text-black flex justify-between">
               <div className="relative   text-lg ">
                 <div className="group ">
                   <button
@@ -147,32 +133,31 @@ const Navbar = () => {
             <Link to="/" onClick={toggleNavDrawer} className="nav-link ">
               Home
             </Link>
-            { borders && <p className="border w-[100%]"></p>}
+            {borders && <p className="border w-[100%]"></p>}
             <Link to="/product" onClick={toggleNavDrawer} className="nav-link">
               All Product
             </Link>
-            { borders && <p className="border w-[100%]"></p>}
+            {borders && <p className="border w-[100%]"></p>}
 
             <Link to="/mens" onClick={toggleNavDrawer} className="nav-link">
               Men
             </Link>
-            { borders && <p className="border w-[100%]"></p>}
+            {borders && <p className="border w-[100%]"></p>}
 
             <Link to="womens" onClick={toggleNavDrawer} className="nav-link">
               Women
             </Link>
-            { borders && <p className="border w-[100%]"></p>}
+            {borders && <p className="border w-[100%]"></p>}
 
             <Link to="about" onClick={toggleNavDrawer} className="nav-link">
               About
             </Link>
-            { borders && <p className="border w-[100%]"></p>}
+            {borders && <p className="border w-[100%]"></p>}
 
             <Link to="contact" onClick={toggleNavDrawer} className="nav-link">
               Contact{" "}
             </Link>
-            { borders && <p className="border w-[100%]"></p>}
-
+            {borders && <p className="border w-[100%]"></p>}
           </div>
           <button onClick={toggleNavDrawer} className="r">
             <IoMdClose className="h-6 w-6 text-gray-600 right-0" />

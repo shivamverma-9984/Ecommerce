@@ -1,11 +1,17 @@
 import React from "react";
 import { Link } from "react-router";
+import { motion } from 'framer-motion';
 
 const Product = ({ product }) => {
-  
-  
   return (
     <>
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+      className="bg-white rounded-lg shadow-lg overflow-hidden"
+    >
       <div className="flex flex-col rounded overflow-hidden  cursor-pointer hover:scale-[1.01] transition-all">
         <Link to={`/product/${product.Id}`} className="w-full">
           <img
@@ -23,9 +29,8 @@ const Product = ({ product }) => {
             ${product.Price}
           </h6>
         </div>
-
-      
       </div>
+      </motion.div>
     </>
   );
 };

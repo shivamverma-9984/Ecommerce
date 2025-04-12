@@ -1,16 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { HiOutlineShoppingBag, HiOutlineUser } from "react-icons/hi";
-import { HiBars3BottomRight } from "react-icons/hi2";
+import { HiBars3BottomRight, HiH1 } from "react-icons/hi2";
 import { IoMdClose } from "react-icons/io";
 import CartDrawer from "./../pages/CartDrawer";
 import SearchBar from "./../pages/SearchBar";
 import { useSelector } from "react-redux";
 import CategoryDropdown from "../pages/CategoryDropdown";
 import { LogIn } from "lucide-react";
+import { Sidebar, SidebarCollapse, SidebarItem, SidebarItemGroup, SidebarItems } from "flowbite-react";
+import { HiArrowSmRight, HiChartPie, HiInbox, HiShoppingBag, HiTable, HiUser } from "react-icons/hi";
+
 const Navbar = () => {
   const [draweOpen, setDrawerOpen] = useState(false);
   const [borders, setborders] = useState(false);
+  const [item, setitem] = useState(false);
   const toggleCartDrawer = () => {
     setDrawerOpen(!draweOpen);
   };
@@ -29,7 +33,9 @@ const Navbar = () => {
     localStorage.removeItem("isLogin");
     navigate("/");
   };
-  useEffect(() => {}, [isLogin]);
+  useEffect(() => {
+    setitem(false)
+  }, [isLogin]);
 
   return (
     <>
@@ -63,12 +69,12 @@ const Navbar = () => {
 
         {/* right-part */}
         <div className="flex items-center  md:space-x-4">
-          <div className="overflow-hidden mr-2">
+          <div className="overflow-hidden mr-2 mt-1 md:mr-4">
             <SearchBar />
           </div>
           <button
             onClick={toggleCartDrawer}
-            className="relative hover:text-black"
+            className="relative hover:text-black  mr-5"
           >
             <HiOutlineShoppingBag className="h-6 w-6 text-gray-700" />
             <span className="absolute -top-1 bg-red-400 text-white text-xs rounded-full px-1.5 py-0.5">
@@ -77,47 +83,36 @@ const Navbar = () => {
           </button>
           {/* searBar */}
           {isLogin ? (
-            <Link to="#" className="hover:text-black flex justify-between">
-              <div className="relative   text-lg ">
-                <div className="group ">
-                  <button
-                    type="button"
-                    className="inline-flex justify-center items-center w-full px-4 py-2  text-md font-semibold text-gray-700 hover:text-black capitalize"
-                  >
-                    <HiOutlineUser className="h-6 w-6 text-gray-700" />
-                  </button>
-
-                  <div className="absolute left-0 w-40 mt-1 origin-top-left top-8 bg-white divide-y divide-gray-100 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-300">
-                    <div className="py-1">
-                      <Link
-                        to=""
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      >
-                        Profile
-                      </Link>
-                      <button
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                        onClick={handleAuth}
-                      >
-                        Logout{" "}
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Link>
+            
+           <div className="dropdown relative inline-flex">
+            <button onClick={()=>setitem(!item)} type="button" data-target="dropdown-default" className="dropdown-toggle inline-flex justify-center items-center gap-2 md:px-3  rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500">
+            <HiOutlineUser className="text-[23px]"/> 
+            </button>
+            { item &&
+            <div id="dropdown-default" className="dropdown-menu rounded-xl shadow-lg bg-white absolute top-full -ml-6 w-72 mt-2 open" aria-labelledby="dropdown-default">
+            <ul className="py-4">
+              <li>
+                <a className="block px-2 py-0.5 hover:bg-gray-100 text-gray-900 font-medium" href="javascript:;"> Profile </a>
+              </li>
+              
+              <li>
+                <a onClick={handleAuth} className="block px-2 py-0.5 hover:bg-gray-100 text-red-500 font-medium" href="javascript:;"> Log Out </a>
+              </li>
+            </ul>
+            </div>
+}
+            </div>
           ) : (
             <Link
               to="sign-in"
-              className="flex items-center space-x-1 bg-indigo-500 text-white px-1 py-1 rounded-lg hover:bg-indigo-700 transition-colors"
+              className="flex items-center space-x-1 px-3 py-1 rounded-lg bg-amber-300 transition-colors"
             >
-              <LogIn className="h-5 " />
-              <span>Sign In</span>
+              <span>Login</span>
             </Link>
           )}
 
           <button onClick={toggleNavDrawer} className="md:hidden">
-            <HiBars3BottomRight className="h-6 w-6 text-gray-700" />
+            <HiBars3BottomRight className="h-6 w-6 ml-1 text-gray-700" />
           </button>
         </div>
       </div>
@@ -133,31 +128,24 @@ const Navbar = () => {
             <Link to="/" onClick={toggleNavDrawer} className="nav-link ">
               Home
             </Link>
-            {borders && <p className="border w-[100%]"></p>}
             <Link to="/product" onClick={toggleNavDrawer} className="nav-link">
               All Product
             </Link>
-            {borders && <p className="border w-[100%]"></p>}
-
             <Link to="/mens" onClick={toggleNavDrawer} className="nav-link">
               Men
             </Link>
-            {borders && <p className="border w-[100%]"></p>}
 
             <Link to="womens" onClick={toggleNavDrawer} className="nav-link">
               Women
             </Link>
-            {borders && <p className="border w-[100%]"></p>}
 
             <Link to="about" onClick={toggleNavDrawer} className="nav-link">
               About
             </Link>
-            {borders && <p className="border w-[100%]"></p>}
 
             <Link to="contact" onClick={toggleNavDrawer} className="nav-link">
               Contact{" "}
             </Link>
-            {borders && <p className="border w-[100%]"></p>}
           </div>
           <button onClick={toggleNavDrawer} className="r">
             <IoMdClose className="h-6 w-6 text-gray-600 right-0" />

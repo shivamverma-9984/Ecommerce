@@ -9,10 +9,11 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Men",
     subCategory:"Shirt",
+    offer:"",
   },
   {
     Id: 2,
-    Name: "Women Dark Blue, White, Black Top",
+    Name: "Dark Blue, White, Black Top",
     Description: "Casual Regular Sleeves Printed Women Dark Blue, White, Black Top",
     Rating: 4.8,
     Price: 59.99,
@@ -20,6 +21,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Women",
     subCategory:"Kurta",
+    offer:40,
   },
   {
     Id: 3,
@@ -31,6 +33,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Kid",
     subCategory:"Shirt",
+    offer:"",
   },
   {
     Id: 4,
@@ -42,6 +45,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Women",
     subCategory:"Jean",
+    offer:"",
   },
  
   {
@@ -54,8 +58,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Men",
     subCategory:"Shirt",
-
-
+    offer:"",
   },
   {
     Id: 6,
@@ -67,6 +70,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Women",
     subCategory:"Shirt",
+    offer:40,
   },
   {
     Id: 7,
@@ -78,6 +82,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Kid",
     subCategory:"Shirt",
+    offer:"",
   },
   {
     Id: 8,
@@ -89,6 +94,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Women",
     subCategory:"Kurta",
+    offer:"",
   },
  
   {
@@ -101,7 +107,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Men",
     subCategory:"Shirt",
-
+    offer:"",
   },
   {
     Id: 10,
@@ -113,6 +119,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Men",
     subCategory:"Shirt",
+    offer:"",
   },
   {
     Id: 11,
@@ -124,6 +131,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Women",
     subCategory:"Shirt",
+    offer:40,
   },
   {
     Id: 12,
@@ -135,6 +143,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Men",
     subCategory:"Shirt",
+    offer:"",
   },
  
   {
@@ -147,6 +156,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Women",
     subCategory:"Saree",
+    offer:"",
   },
   {
     Id: 14,
@@ -158,7 +168,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Men",
     subCategory:"Shirt",
-
+    offer:"",
   },
   {
     Id: 15,
@@ -170,7 +180,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Women",
     subCategory:"Kurta",
-
+    offer:"",
   },
   {
     Id: 16,
@@ -182,6 +192,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Women",
     subCategory:"Saree",
+    offer:40,
   },
   {
     Id: 17,
@@ -193,6 +204,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Women",
     subCategory:"Jean",
+    offer:"",
   },
   {
     Id: 18,
@@ -204,6 +216,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Women",
     subCategory:"Saree",
+    offer:"",
   },
 
   {
@@ -216,6 +229,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Women",
     subCategory:"Jean",
+    offer:"",
   },
   {
     Id: 4,
@@ -227,6 +241,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Men",
     subCategory:"Shirt",
+    offer:"",
   },
   {
     Id: 21,
@@ -238,6 +253,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Women",
     subCategory:"Saree",
+    offer:"40",
   },
   {
     Id: 22,
@@ -249,6 +265,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Men",
     subCategory:"Shirt",
+    offer:"",
   },
   {
     Id: 23,
@@ -260,6 +277,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Women",
     subCategory:"Saree",
+    offer:"",
   },
   {
     Id: 24,
@@ -271,6 +289,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Women",
     subCategory:"Saree",
+    offer:"",
   },
  
   {
@@ -283,7 +302,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Kid",
     subCategory:"Shirt",
-    
+    offer:"",
   },
   {
     Id: 25,
@@ -295,6 +314,7 @@ export const products = [
     Sizes: ["S", "M", "L", "XL", "XXL"],
     Category: "Women",
     subCategory:"Jean",
+    offer:"",
   },
   
 ];

@@ -14,9 +14,10 @@ import Contact from "./pages/Contact";
 import About from './pages/About';
 import ForgetPassword from "./pages/FogetPassword";
 import Kids from "./pages/Kids";
+import PageNotFound from "./pages/PageNotFound";
 const App = () => {
   return (
-    <storeProvider>
+    <>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -32,10 +33,11 @@ const App = () => {
           <Route path="/contact" element={<Contact />} />
           <Route path="/searchproduct" element={<SearchProduct />} />
           <Route path="/product/:Id" element={<ProductDetails />} />
+          <Route path="/*" element={<PageNotFound />} />
         </Routes>
         <Footer />
       </BrowserRouter>
-    </storeProvider>
+    </>
   );
 };
 

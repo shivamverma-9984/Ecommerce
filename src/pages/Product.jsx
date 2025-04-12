@@ -9,7 +9,7 @@ const Product = ({ product }) => {
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 1.5 }}
       className="bg-white rounded-lg shadow-lg overflow-hidden"
     >
       <div className="flex flex-col rounded overflow-hidden  cursor-pointer hover:scale-[1.01] transition-all">
@@ -21,13 +21,17 @@ const Product = ({ product }) => {
           />
         </Link>
 
-        <div className=" mt-1 flex-1 flex flex-col">
-          <h5 className="text-sm text-slate-900 line-clamp-2">
+        <div className="mt-1 flex-1 flex flex-col">
+          <h5 className="px-1 text-sm text-slate-900 line-clamp-2">
             {product.Name}
           </h5>
-          <h6 className="text-sm font-semibold text-slate-900">
-            ${product.Price}
+          <div className="flex">
+          <img className="h-[14px] mt-1" src="https://cdn-icons-png.flaticon.com/128/17988/17988582.png" alt="" srcset="" />
+          <h6 className="text-sm font-semibold text-slate-900 mb-1">
+            {product.Price}
           </h6>
+          </div>
+         
         </div>
       </div>
       </motion.div>

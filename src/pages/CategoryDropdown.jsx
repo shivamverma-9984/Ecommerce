@@ -5,7 +5,7 @@ const CategoryDropdown = () => {
     const [item, setitem] = useState(false);
   return (
      <div className="dropdown relative inline-flex">
-                <button onClick={()=>setitem(!item)} type="button" data-target="dropdown-default" className="dropdown-toggle inline-flex justify-center items-center gap-2 font-bold mt-2   cursor-pointer text-center shadow-xs transition-all duration-500">
+                <button onClick={()=>setitem(!item)} type="button" data-target="dropdown-default" className="dropdown-toggle inline-flex justify-center items-center gap-2 font-semibold text-gray-700 mt-2 cursor-pointer text-center transition-all duration-500">
                 Category
                 </button>
                 { item &&

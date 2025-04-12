@@ -40,7 +40,7 @@ const Navbar = () => {
   return (
     <>
       {/* navbar */}
-      <div className="fixed  top-0 w-full z-50 shadow-2xl  bg-white  mx-auto flex items-center justify-between py-4 px-3 md:px-6">
+      <div className="fixed  top-0 w-full z-50 shadow-2xl  bg-white  mx-auto flex items-center justify-between py-4.5 px-3 md:px-6">
         {/* left-logo */}
         <div className="">
           <Link to="/" className=" text-2xl font-medium">
@@ -92,11 +92,11 @@ const Navbar = () => {
             <div id="dropdown-default" className="dropdown-menu rounded-xl shadow-lg bg-white absolute top-full -ml-6 w-72 mt-2 open" aria-labelledby="dropdown-default">
             <ul className="py-4">
               <li>
-                <a className="block px-2 py-0.5 hover:bg-gray-100 text-gray-900 font-medium" href="javascript:;"> Profile </a>
+                <Link className="block px-2 py-0.5 hover:bg-gray-100 text-gray-900 font-medium" to="javascript:;"> Profile </Link>
               </li>
               
               <li>
-                <a onClick={handleAuth} className="block px-2 py-0.5 hover:bg-gray-100 text-red-500 font-medium" href="javascript:;"> Log Out </a>
+                <Link onClick={handleAuth} className="block px-2 py-0.5 hover:bg-gray-100 text-red-500 font-medium" to="javascript:;"> Log Out </Link>
               </li>
             </ul>
             </div>

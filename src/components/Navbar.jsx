@@ -7,13 +7,10 @@ import CartDrawer from "./../pages/CartDrawer";
 import SearchBar from "./../pages/SearchBar";
 import { useSelector } from "react-redux";
 import CategoryDropdown from "../pages/CategoryDropdown";
-import { LogIn } from "lucide-react";
-import { Sidebar, SidebarCollapse, SidebarItem, SidebarItemGroup, SidebarItems } from "flowbite-react";
-import { HiArrowSmRight, HiChartPie, HiInbox, HiShoppingBag, HiTable, HiUser } from "react-icons/hi";
 
 const Navbar = () => {
   const [draweOpen, setDrawerOpen] = useState(false);
-  const [borders, setborders] = useState(false);
+  const [activeItem, setActiveItem] = useState("Home");
   const [item, setitem] = useState(false);
   const toggleCartDrawer = () => {
     setDrawerOpen(!draweOpen);
@@ -34,13 +31,13 @@ const Navbar = () => {
     navigate("/");
   };
   useEffect(() => {
-    setitem(false)
+    setitem(false);
   }, [isLogin]);
 
   return (
     <>
       {/* navbar */}
-      <div className="fixed  top-0 w-full z-50 shadow-2xl  bg-white  mx-auto flex items-center justify-between py-4.5 px-3 md:px-6">
+      <div className="fixed  top-0 w-full z-50 shadow-2xl  bg-white  mx-auto flex items-center justify-between py-4 px-3 md:px-6">
         {/* left-logo */}
         <div className="">
           <Link to="/" className=" text-2xl font-medium">
@@ -50,19 +47,43 @@ const Navbar = () => {
 
         {/* center-part */}
         <div className=" hidden md:flex space-x-6 ">
-          <Link to="/" className="nav-link">
+          <Link
+            to="/"
+            className={`nav-link ${
+              activeItem === "Home" ? "border-b-2" : "border-none"
+            }`}
+            onClick={() => setActiveItem("Home")}
+          >
             Home
           </Link>
-          <Link to="/product" className="nav-link">
+          <Link
+            to="/product"
+            className={`nav-link ${
+              activeItem === "All Product" ? "border-b-2" : "border-none"
+            }`}
+            onClick={() => setActiveItem("All Product")}
+          >
             All Product
           </Link>
 
           <CategoryDropdown />
 
-          <Link to="/about" className="nav-link">
+          <Link
+            to="/about"
+            className={`nav-link ${
+              activeItem === "About" ? "border-b-2" : "border-none"
+            }`}
+            onClick={() => setActiveItem("About")}
+          >
             About
           </Link>
-          <Link to="/contact" className="nav-link">
+          <Link
+            to="/contact"
+            className={`nav-link ${
+              activeItem === "Contact" ? "border-b-2" : "border-none"
+            }`}
+            onClick={() => setActiveItem("Contact")}
+          >
             Contact
           </Link>
         </div>
@@ -83,24 +104,45 @@ const Navbar = () => {
           </button>
           {/* searBar */}
           {isLogin ? (
-            
-           <div className="dropdown relative inline-flex">
-            <button onClick={()=>setitem(!item)} type="button" data-target="dropdown-default" className="dropdown-toggle inline-flex justify-center items-center gap-2 md:px-3  rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500">
-            <HiOutlineUser className="text-[23px]"/> 
-            </button>
-            { item &&
-            <div id="dropdown-default" className="dropdown-menu rounded-xl shadow-lg bg-white absolute top-full -ml-6 w-72 mt-2 open" aria-labelledby="dropdown-default">
-            <ul className="py-4">
-              <li>
-                <Link className="block px-2 py-0.5 hover:bg-gray-100 text-gray-900 font-medium" to="javascript:;"> Profile </Link>
-              </li>
-              
-              <li>
-                <Link onClick={handleAuth} className="block px-2 py-0.5 hover:bg-gray-100 text-red-500 font-medium" to="javascript:;"> Log Out </Link>
-              </li>
-            </ul>
-            </div>
-}
+            <div className="dropdown relative inline-flex">
+              <button
+                onClick={() => setitem(!item)}
+                type="button"
+                data-target="dropdown-default"
+                className="dropdown-toggle inline-flex justify-center items-center gap-2 md:px-3  rounded-full cursor-pointer font-semibold text-center shadow-xs transition-all duration-500"
+              >
+                <HiOutlineUser className="text-[23px]" />
+              </button>
+              {item && (
+                <div
+                  id="dropdown-default"
+                  className="dropdown-menu rounded-xl shadow-lg bg-white absolute top-full -ml-6 w-72 mt-2 open"
+                  aria-labelledby="dropdown-default"
+                >
+                  <ul className="py-4">
+                    <li>
+                      <Link
+                        className="block px-2 py-0.5 hover:bg-gray-100 text-gray-900 font-medium"
+                        to="javascript:;"
+                      >
+                        {" "}
+                        Profile{" "}
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        onClick={handleAuth}
+                        className="block px-2 py-0.5 hover:bg-gray-100 text-red-500 font-medium"
+                        to="javascript:;"
+                      >
+                        {" "}
+                        Log Out{" "}
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              )}
             </div>
           ) : (
             <Link
@@ -125,25 +167,55 @@ const Navbar = () => {
       >
         <div className="flex justify-start  px-2 mt-2">
           <div className=" absolute md:hidden flex flex-col space-y-3 mt-8 text-xl">
-            <Link to="/" onClick={toggleNavDrawer} className="nav-link ">
-              Home
+            <Link to="/" onClick={toggleNavDrawer}>
+              Home{" "}
             </Link>
-            <Link to="/product" onClick={toggleNavDrawer} className="nav-link">
+            <Link
+              to="/product"
+              onClick={toggleNavDrawer}
+              className={`nav-link ${
+                activeItem === "" ? "border-b-2" : "border-none"
+              }`}
+            >
               All Product
             </Link>
-            <Link to="/mens" onClick={toggleNavDrawer} className="nav-link">
+            <Link
+              to="/mens"
+              onClick={toggleNavDrawer}
+              className={`nav-link ${
+                activeItem === "" ? "border-b-2" : "border-none"
+              }`}
+            >
               Men
             </Link>
 
-            <Link to="womens" onClick={toggleNavDrawer} className="nav-link">
+            <Link
+              to="womens"
+              onClick={toggleNavDrawer}
+              className={`nav-link ${
+                activeItem === "" ? "border-b-2" : "border-none"
+              }`}
+            >
               Women
             </Link>
 
-            <Link to="about" onClick={toggleNavDrawer} className="nav-link">
+            <Link
+              to="about"
+              onClick={toggleNavDrawer}
+              className={`nav-link ${
+                activeItem === "" ? "border-b-2" : "border-none"
+              }`}
+            >
               About
             </Link>
 
-            <Link to="contact" onClick={toggleNavDrawer} className="nav-link">
+            <Link
+              to="contact"
+              onClick={toggleNavDrawer}
+              className={`nav-link ${
+                activeItem === "" ? "border-b-2" : "border-none"
+              }`}
+            >
               Contact{" "}
             </Link>
           </div>

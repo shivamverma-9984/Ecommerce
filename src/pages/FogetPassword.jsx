@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import toast from 'react-hot-toast';
-import { Link, useNavigate } from 'react-router'
+import {useNavigate } from 'react-router'
 
 const FogetPassword = () => {
     const [formdata, setformdata] = useState({
@@ -33,9 +33,9 @@ const FogetPassword = () => {
 
   return (
     <div className="py-16">
-      <div className="flex bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm lg:max-w-4xl">
+      <div className="flex  bg-white rounded-lg shadow-lg overflow-hidden mx-auto max-w-sm  mt-6">
       
-        <div className="w-full p-8 lg:w-1/2">
+        <div className="w-full p-8  ">
           <h2 className="text-2xl font-semibold text-gray-700 text-center">
            Forget Password
           </h2>

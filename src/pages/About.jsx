@@ -1,82 +1,128 @@
-import React from 'react'
+import { motion } from 'framer-motion';
+import { Users, Award, Package, Heart } from 'lucide-react';
 
-const About = () => {
+const About=()=>{
+  const stats = [
+    { icon: Users, label: 'Happy Customers', value: '10,000+' },
+    { icon: Award, label: 'Years Experience', value: '15+' },
+    { icon: Package, label: 'Products', value: '5,000+' },
+    { icon: Heart, label: 'Reviews', value: '25,000+' },
+  ];
+
   return (
-    <section className="py-10 relative xl:mr-0 lg:mr-5 mr-0">
-    <div className="w-full max-w-7xl px-4 md:px-5 lg:px-5 mx-auto">
-        <div className="w-full justify-start items-center xl:gap-12 gap-10 grid lg:grid-cols-2 grid-cols-1">
-            <div className="w-full flex-col justify-center lg:items-start items-center gap-10 inline-flex">
-                <div className="w-full flex-col justify-center items-start gap-8 flex">
-                    <div className="flex-col justify-start lg:items-start items-center gap-3 flex">
-                        <h6 className="text-gray-400 text-base font-normal leading-relaxed">About Us</h6>
-                        <div className="w-full flex-col justify-start lg:items-start items-center gap-2 flex">
-                            <h2
-                                className="text-indigo-700 text-3xl font-semibold font-manrope leading-normal lg:text-start text-center">
-                                The Tale of Our Achievement Story</h2>
-                            <p
-                                className="text-gray-500 text-base font-normal leading-relaxed lg:text-start text-center">
-                                Our achievement story is a testament to teamwork and perseverance. Together, we've
-                                overcome challenges, celebrated victories, and created a narrative of progress and
-                                success.</p>
-                        </div>
-                    </div>
-                    <div className="w-full flex-col justify-center items-start gap-2 flex">
-                        <div className="w-full justify-start items-center gap-4 grid md:grid-cols-2 grid-cols-1">
-                            <div
-                                className="w-full h-full p-2 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start inline-flex">
-                                <h4 className="text-gray-900 text-xl font-bold font-manrope leading-9">33+ Years</h4>
-                                <p className="text-gray-500  text-md leading-relaxed">Influencing Digital
-                                    Landscapes Together</p>
-                            </div>
-                            <div
-                                className="w-full h-full p-2 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start  inline-flex">
-                                <h4 className="text-gray-900 text-xl font-bold font-manrope leading-9">125+ Projects
-                                </h4>
-                                <p className="text-gray-500  leading-relaxed">Excellence Achieved
-                                    Through Success</p>
-                            </div>
-                        </div>
-                        <div className="w-full h-full justify-start items-center gap-4 grid md:grid-cols-2 grid-cols-1">
-                            <div
-                                className="w-full p-2 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start inline-flex">
-                                <h4 className="text-gray-900 text-xl font-bold font-manrope leading-9">26+ Awards</h4>
-                                <p className="text-gray-500 leading-relaxed">Our Dedication to
-                                    Innovation Wins Understanding</p>
-                            </div>
-                            <div
-                                className="w-full h-full p-2 rounded-xl border border-gray-200 hover:border-gray-400 transition-all duration-700 ease-in-out flex-col justify-start items-start inline-flex">
-                                <h4 className="text-gray-900 text-xl font-bold font-manrope leading-9">99% Happy
-                                    Clients</h4>
-                                <p className="text-gray-500 leading-relaxed">Mirrors our Focus on
-                                    Client Satisfaction.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button
-                    className="sm:w-fit w-full group px-3.5 py-2 bg-indigo-50 hover:bg-indigo-100 rounded-lg shadow-[0px_1px_2px_0px_rgba(16,_24,_40,_0.05)] transition-all duration-700 ease-in-out justify-center items-center flex">
-                    <span
-                        className="px-1.5 text-indigo-600 text-sm font-medium leading-6 group-hover:-translate-x-0.5 transition-all duration-700 ease-in-out">Read
-                        More</span>
-                    <svg className="group-hover:translate-x-0.5 transition-all duration-700 ease-in-out"
-                        xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                        <path d="M6.75265 4.49658L11.2528 8.99677L6.75 13.4996" stroke="#4F46E5" stroke-width="1.6"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </div>
-            <div className="w-full lg:justify-start justify-center items-start flex">
-                <div
-                    className="sm:w-[564px] w-full sm:h-[646px] h-full sm:bg-gray-100 rounded-3xl sm:border border-gray-200 relative">
-                    <img className="sm:mt-5 sm:ml-5  rounded-3xl object-cover"
-                        src="https://pagedone.io/asset/uploads/1717742431.png" alt="about Us image" />
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-                                        
-  )
-}
+    <div className="min-h-screen bg-gray-50 py-16 px-4 sm:px-6 lg:px-8 mt-12">
+      {/* Hero Section */}
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Our Story</h1>
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Founded in 2010, we've grown from a small boutique to a leading fashion destination,
+            always staying true to our core values of quality, style, and customer satisfaction.
+          </p>
+        </motion.div>
 
+        {/* Stats Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
+        >
+          {stats.map(({ icon: Icon, label, value }) => (
+            <div key={label} className="text-center">
+              <Icon className="w-6 h-6 mx-auto mb-2 text-indigo-600" />
+              <h3 className="text-2xl font-bold text-gray-900 ">{value}</h3>
+              <p className="text-gray-600">{label}</p>
+            </div>
+          ))}
+        </motion.div>
+
+        {/* Mission Section */}
+        <div className="grid md:grid-cols-2 gap-12 items-center mb-10 -mt-8">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="relative h-96"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80"
+              alt="Our team working"
+              className="w-full h-full object-cover rounded-lg shadow-xl"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className='md:-mt-44'
+          >
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Our Mission</h2>
+            <p className="text-gray-600 mb-4">
+              We believe that everyone deserves to look and feel their best. Our mission is to provide
+              high-quality, fashionable clothing that empowers individuals to express their unique style
+              with confidence.
+            </p>
+            <p className="text-gray-600">
+              We're committed to sustainable practices and ethical manufacturing, ensuring that our
+              fashion-forward approach doesn't compromise our responsibility to the planet and its people.
+            </p>
+          </motion.div>
+        </div>
+
+        {/* Team Section */}
+        {/* <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center"
+        >
+          <h2 className="text-3xl font-bold text-gray-900 mb-16">Meet Our Leadership</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {[
+              {
+                name: 'Sarah Johnson',
+                role: 'CEO & Founder',
+                image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+              },
+              {
+                name: 'Michael Chen',
+                role: 'Creative Director',
+                image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+              },
+              {
+                name: 'Emily Rodriguez',
+                role: 'Head of Design',
+                image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80'
+              }
+            ].map((member) => (
+              <motion.div
+                key={member.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="bg-white rounded-lg shadow-lg overflow-hidden"
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-80 object-cover"
+                />
+                <div className="p-2">
+                  <h3 className="text-lg font-semibold text-gray-900">{member.name}</h3>
+                  <p className="text-gray-600 ">{member.role}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div> */}
+      </div>
+    </div>
+  );
+}
 export default About

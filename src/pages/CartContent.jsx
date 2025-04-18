@@ -6,9 +6,30 @@ import {
   incrementQuantity,
   decrementQuantity,
 } from "../redux/cartSlice";
-const CartContent = () => {
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+const CartContent = ({toggleCartDrawer}) => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const dispatch = useDispatch();
+  const handleDelete=async(id)=>{
+      const response=await Swal.fire({
+      title: "Are you sure?",
+      // text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Remove it!"
+    })
+      if (response.isConfirmed) {
+        Swal.fire({
+          title: "Done!",
+          text: "Item has been Removed.",
+          icon: "success"
+        });
+        dispatch(removeFromCart(id));
+        toggleCartDrawer(false);
+      }   
+  }
   return (
     <div>
       {cartItems.map((product) => (
@@ -47,7 +68,7 @@ const CartContent = () => {
           <img className="h-[17px]" src="https://cdn-icons-png.flaticon.com/128/17988/17988582.png" alt="" srcset="" />
           <p className=" font-semibold  flex">{(product.quantity*product.Price).toFixed(2)}</p>
           </div>
-            <button className="flex justify-center" onClick={() => dispatch(removeFromCart(product.Id))}>
+            <button className="flex justify-center" onClick={()=>handleDelete(product.Id)}>
               <RiDeleteBin3Line />
             </button>
           </div>
@@ -58,3 +79,5 @@ const CartContent = () => {
 };
 
 export default CartContent;
+
+

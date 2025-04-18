@@ -20,13 +20,11 @@ const ProductDetails = () => {
     }
   };
   window.scrollTo({ top: 0, behavior: "smooth" });
-
   const relatedProduct = products.filter(
     (item) =>
       item.Category === product.Category &&
       item.subCategory === product.subCategory
   );
-  console.log(relatedProduct);
   return (
     <>
       <div className="bg-gray-100 dark:bg-gray-800 py-8 mt-16">
@@ -73,7 +71,7 @@ const ProductDetails = () => {
                       className="h-[16px] mt-1"
                       src="https://cdn-icons-png.flaticon.com/128/17988/17988582.png"
                       alt=""
-                      srcset=""
+                      srcSet=""
                     />
                     <span className="text-gray-600 dark:text-gray-300">
                       ${Price}

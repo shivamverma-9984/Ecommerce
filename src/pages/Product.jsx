@@ -16,6 +16,7 @@ const Product = ({ product }) => {
         <Link to={`/product/${product.Id}`} className="w-full">
           <img
             src={product.Image}
+            srcSet=""
             alt="Product 1"
             className=" h-64 object-cover object-top aspect-[230/307]"
           />
@@ -26,7 +27,7 @@ const Product = ({ product }) => {
             {product.Name}
           </h5>
           <div className="flex">
-          <img className="h-[14px] mt-1" src="https://cdn-icons-png.flaticon.com/128/17988/17988582.png" alt="" srcset="" />
+          <img className="h-[14px] mt-1" src="https://cdn-icons-png.flaticon.com/128/17988/17988582.png" alt="" srcSet="" />
           <h6 className="text-sm font-semibold text-slate-900 mb-1">
             {product.Price}
           </h6>

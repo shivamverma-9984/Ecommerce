@@ -3,6 +3,7 @@
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
 
+
 @layer components{
     .nav-link{
         @apply text-gray-700 hover:text-black font-medium capitalize pt-2.5

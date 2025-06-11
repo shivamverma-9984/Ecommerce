@@ -6,30 +6,30 @@ import {
   incrementQuantity,
   decrementQuantity,
 } from "../redux/cartSlice";
-import Swal from 'sweetalert2/dist/sweetalert2.js'
-const CartContent = ({toggleCartDrawer}) => {
+import Swal from "sweetalert2/dist/sweetalert2.js";
+const CartContent = ({ toggleCartDrawer }) => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const dispatch = useDispatch();
-  const handleDelete=async(id)=>{
-      const response=await Swal.fire({
+  const handleDelete = async (id) => {
+    const response = await Swal.fire({
       title: "Are you sure?",
       // text: "You won't be able to revert this!",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, Remove it!"
-    })
-      if (response.isConfirmed) {
-        Swal.fire({
-          title: "Done!",
-          text: "Item has been Removed.",
-          icon: "success"
-        });
-        dispatch(removeFromCart(id));
-        toggleCartDrawer(false);
-      }   
-  }
+      confirmButtonText: "Yes, Remove it!",
+    });
+    if (response.isConfirmed) {
+      Swal.fire({
+        title: "Done!",
+        text: "Item has been Removed.",
+        icon: "success",
+      });
+      dispatch(removeFromCart(id));
+      toggleCartDrawer(false);
+    }
+  };
   return (
     <div>
       {cartItems.map((product) => (
@@ -64,11 +64,16 @@ const CartContent = ({toggleCartDrawer}) => {
             </div>
           </div>
           <div className="flex flex-col gap-y-2">
-          <div className="flex  items-center">
-          <img className="h-[17px]" src="https://cdn-icons-png.flaticon.com/128/17988/17988582.png" alt="" srcset="" />
-          <p className=" font-semibold  flex">{(product.quantity*product.Price).toFixed(2)}</p>
-          </div>
-            <button className="flex justify-center" onClick={()=>handleDelete(product.Id)}>
+            <div className="flex  items-center">
+              ₹{" "}
+              <p className=" font-semibold  flex">
+                {(product.quantity * product.Price).toFixed(2)}
+              </p>
+            </div>
+            <button
+              className="flex justify-center"
+              onClick={() => handleDelete(product.Id)}
+            >
               <RiDeleteBin3Line />
             </button>
           </div>
@@ -79,5 +84,3 @@ const CartContent = ({toggleCartDrawer}) => {
 };
 
 export default CartContent;
-
-

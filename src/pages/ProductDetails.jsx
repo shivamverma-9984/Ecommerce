@@ -5,10 +5,12 @@ import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
 import { toast } from "react-hot-toast";
 import Product from "./Product";
+import ProductRating from "./ProductRating";
+
 const ProductDetails = () => {
   const { Id } = useParams();
   const product = products.find((product) => product.Id === Number(Id));
-  const { Image, Name, Description, Price, Sizes } = product;
+  const { Image, Name, Description, Price, Sizes,Rating } = product;
   const isLogin = localStorage.getItem("isLogin");
   const dispatch = useDispatch();
   const handleAddToCart = (product) => {
@@ -27,7 +29,7 @@ const ProductDetails = () => {
   );
   return (
     <>
-      <div className="bg-gray-100 dark:bg-gray-800 py-8 mt-16">
+      <div className=" dark:bg-gray-800 py-8 mt-16">
         <div className="max-w-4xl mx-auto  sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row ">
             <div className="md:flex-1 px-4">
@@ -61,26 +63,20 @@ const ProductDetails = () => {
               <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
                 {Description}
               </p>
+              <div className="flex gap-2">
+                <p>Rating</p>
+               <ProductRating rating={Rating} count={2} />
+                
+              </div>
               <div className="flex mb-4">
                 <div className="mr-4 flex">
-                  <span className="font-bold text-gray-700 dark:text-gray-300">
-                    Price:
-                  </span>
-                  <div className="flex">
-                    <img
-                      className="h-[16px] mt-1"
-                      src="https://cdn-icons-png.flaticon.com/128/17988/17988582.png"
-                      alt=""
-                      srcSet=""
-                    />
-                    <span className="text-gray-600 dark:text-gray-300">
-                      ${Price}
-                    </span>
-                  </div>
+                  <p className="font-bold text-gray-700 dark:text-gray-300">
+                    Price: ₹ <span className=" font-medium text-gray-600 dark:text-gray-300">{Price}</span>
+                  </p>
                 </div>
                 <div>
                   <span className="font-bold text-gray-700 dark:text-gray-300">
-                    Availability:
+                    Availability : 
                   </span>
                   <span className="text-gray-600 dark:text-gray-300">
                     In Stock
@@ -122,8 +118,8 @@ const ProductDetails = () => {
           </div>
         </div>
       </div>
-      <h1 className="px-3 mt-2 mb-2 text-2xl md:text-3xl font-semibold">
-        Similar Products
+      <h1 className="px-3 mt-4 mb-4 text-2xl md:text-3xl font-semibold">
+     You May Also Like
       </h1>
       <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-2 px-3">
         {relatedProduct.map((product) => (

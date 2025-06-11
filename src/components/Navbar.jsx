@@ -37,7 +37,7 @@ const Navbar = () => {
   return (
     <>
       {/* navbar */}
-      <div className="fixed  top-0 w-full z-50 shadow-2xl  bg-white  mx-auto flex items-center justify-between py-4 px-3 md:px-6">
+      <div className="fixed  top-0 w-full z-50 shadow-md  bg-white  mx-auto flex items-center justify-between py-4 px-3 md:px-6">
         {/* left-logo */}
         <div className="">
           <Link to="/" className=" text-2xl font-medium">
@@ -63,7 +63,7 @@ const Navbar = () => {
             }`}
             onClick={() => setActiveItem("All Product")}
           >
-            All Product
+            Products
           </Link>
 
           <CategoryDropdown />
@@ -177,7 +177,7 @@ const Navbar = () => {
                 activeItem === "" ? "border-b-2" : "border-none"
               }`}
             >
-              All Product
+            Products
             </Link>
             <Link
               to="/mens"
